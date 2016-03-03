@@ -4,7 +4,7 @@ require_once 'Services/Soundcloud.php';
 
 session_start();
 
-$client = new Services_Soundcloud('cade8577a8839fa6de895b504fafecc9', '42270f185a5abb1da0aaf54e0ae226ff', 'http://www.nataraja-music.com/soundcloud/index.php');
+$client = new Services_Soundcloud('cade8577a8839fa6de895b504fafecc9', '42270f185a5abb1da0aaf54e0ae226ff', 'http://www.nataraja-music.com/files/soundcloud/index.php');
 
 function login()
 {
