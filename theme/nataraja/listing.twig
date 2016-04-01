@@ -24,6 +24,8 @@
                                     <img src="{{ thumbnail(record.image, 400, 260) }}">
                                 </a></div>
                         {% endfor %}
+                        {# If there are more records than will fit on one page, the pager is shown. #}
+                        {{ pager() }}
                     </div>
                 </div>
             </div>
