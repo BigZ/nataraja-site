@@ -25,6 +25,8 @@
 # Assets and user uploads
 /web/bundles/
 /web/uploads/
+/files/
+!/files/index.html
 
 # Assets managed by Bower
 /web/assets/vendor/
@@ -38,3 +40,6 @@
 
 # Composer PHAR
 /composer.phar
+
+# Database
+app/database/bolt.db

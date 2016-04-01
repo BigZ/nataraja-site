@@ -1,29 +1,23 @@
 {% include '_header.twig' %}
 
 <!-- Main Page Content and Sidebar -->
+<section data-os-animation="fadeIn" data-os-animation-delay="0s" class="section-tiny section section-semi-white os-animation animated fadeIn" style="animation-delay: 0s;">
+    <div class="container-fluid">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="section-head with-icon"><i class="ion-heart"></i>
+                <h3>{{ record.title }}</h3>
+                <p>
+                    {% for key,value in record.values if key not in ['id', 'slug', 'datecreated', 'datechanged', 'datepublish', 'datedepublish', 'username', 'status', 'title', 'subtitle', 'ownerid', 'templatefields'] %}
 
-    <!-- Main Blog Content -->
-    <div class="large-8 columns" role="content">
-
-        <article>
-
-            <h2 data-bolt-field="title">{{ record.title }}</h2>
-
-            {% if record.subtitle %}
-                <h3 data-bolt-field="subtitle">{{ record.subtitle }}</h3>
-            {% endif %}
-
-            {% for key,value in record.values if key not in ['id', 'slug', 'datecreated', 'datechanged', 'datepublish', 'datedepublish', 'username', 'status', 'title', 'subtitle', 'ownerid', 'templatefields'] %}
-
-                {% if record.fieldtype(key) == "image" and value != "" %}
+                    {% if record.fieldtype(key) == "image" and value != "" %}
 
                     {% if record.image!="" %}
-                        <div class="large-4 imageholder">
-                            <a href="{{ image(value) }}">
-                                <img src="{{ thumbnail(value, 640, 480) }}">
-                            </a>
-                        </div>
-                    {% endif %}
+                <div class="large-4 imageholder">
+                    <a href="{{ image(value) }}">
+                        <img src="{{ thumbnail(value, 640, 480) }}">
+                    </a>
+                </div>
+                {% endif %}
 
 
                 {% elseif record.fieldtype(key) == "imagelist" and attribute(record, key) is not empty %}
@@ -77,48 +71,12 @@
 
                 {%  endif %}
 
-            {% endfor %}
-
-            {# Uncomment this if you wish to dump the entire record to the client, for debugging purposes.
-            {{ print(record) }}
-            #}
-
-            {% include '_recordfooter.twig' with {'record': record} %}
-
-            <p class="meta">
-                {% set previous = record.previous('id') %}
-                {% if previous %}
-                    <a href="{{ previous.link }}">&laquo; {{ previous.title }}</a>
-                {% endif %}
-                -
-                {% set next = record.next('id') %}
-                {% if next %}
-                    <a href="{{ next.link }}">{{ next.title }} &raquo;</a>
-                {% endif %}
-            </p>
-
-            {% set relatedrecords = record.related() %}
-            {% if relatedrecords is not empty %}
-                <p class="meta">{{ __('Related content:') }}
-                <ul>
-                    {% for related in relatedrecords %}
-                        <li><a href="{{ related.link }}">{{ related.title }}</a></li>
-                    {%  endfor %}
-                </ul>
+                {% endfor %}
                 </p>
-            {% endif %}
-
-        </article>
-
-
+            </div>
+        </div>
     </div>
-
-    <!-- End Main Content -->
-
-    {% include '_aside.twig' %}
-
-    <!-- End Main Content and Sidebar -->
-
+</section>
 
 
     {% include '_footer.twig' %}
