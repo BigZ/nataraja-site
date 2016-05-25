@@ -8,21 +8,48 @@
                 <div class="col-md-12">
                     <div class="row section-head">
                         <div class="col-md-6 text-left">
-                            <h3>{{ contenttype }}</h3>
+                            <h3>Live acts</h3>
                         </div>
                         <div class="col-md-6 text-right">
                             <p>Select one.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 margin-top-big">
+                <div class="col-md-12">
                     <div class="row releases-wrap">
                         {% for record in records %}
+                            {% if record.type == "Live" %}
                             <div class="col-md-4 margin-top-big">
                                 <a href="{{ record.link }}">
                                     {{ record.title }}
                                     <img src="{{ thumbnail(record.image, 400, 260) }}">
-                                </a></div>
+                                </a>
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-md-12 margin-top-big">
+                    <div class="row section-head">
+                        <div class="col-md-6 text-left">
+                            <h3>DJ's</h3>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <p>Select one.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row releases-wrap">
+                        {% for record in records %}
+                        {% if record.type != "Live" %}
+                            <div class="col-md-4 margin-top-big">
+                                <a href="{{ record.link }}">
+                                    {{ record.title }}
+                                    <img src="{{ thumbnail(record.image, 400, 260) }}">
+                                </a>
+                            </div>
+                        {% endif %}
                         {% endfor %}
                     </div>
                 </div>
