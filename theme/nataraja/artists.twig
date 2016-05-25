@@ -1,0 +1,36 @@
+{% include '_header.twig' %}
+
+    <!-- Main Blog Content -->
+<section class="section section-white" style="padding-top:30px">
+    <div class="container-fluid">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row section-head">
+                        <div class="col-md-6 text-left">
+                            <h3>{{ contenttype }}</h3>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <p>Select one.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 margin-top-big">
+                    <div class="row releases-wrap">
+                        {% for record in records %}
+                            <div class="col-md-4 margin-top-big">
+                                <a href="{{ record.link }}">
+                                    {{ record.title }}
+                                    <img src="{{ thumbnail(record.image, 400, 260) }}">
+                                </a></div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- End Main Content -->
+
+{% include '_footer.twig' %}

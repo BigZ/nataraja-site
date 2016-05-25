@@ -51,6 +51,8 @@ pages:
 artists:
     name: Artists
     singular_name: Artist
+    listing_template: artists.twig
+    record_template: artist.twig
     fields:
         name:
             type: text
