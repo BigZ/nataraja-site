@@ -114,7 +114,7 @@ record_template: record.twig
 #         website, be sure to check for a config.yml file in your theme's
 #         folder. If a template is set there, it will override the setting here.
 listing_template: listing.twig
-listing_records: 6
+listing_records: 100
 listing_sort: datepublish DESC
 
 # Because of limitations on how the underlying database queries work, there are
@@ -136,7 +136,7 @@ add_jquery: false
 
 # The default amount of records to show on overview pages. Can be overridden
 # for each contenttype.
-recordsperpage: 10
+recordsperpage: 100
 
 # Settings for caching in parts of Bolt.
 # - config:        Caches the parsed .yml files from /app/config. It's updated
