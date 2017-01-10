@@ -53,6 +53,7 @@ artists:
     singular_name: Artist
     listing_template: artists.twig
     record_template: artist.twig
+    listing_sort: name ASC
     fields:
         name:
             type: text
