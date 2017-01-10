@@ -5,7 +5,7 @@
     <div class="container-fluid">
         <div class="col-md-6 col-md-offset-3">
             <div class="section-head with-icon"><i class="ion-heart"></i>
-                <h3>{{ record.title }} z</h3>
+                <h3>{{ record.title }}</h3>
                 <p>
                     {% for key,value in record.values if key not in ['id', 'title', 'slug', 'datecreated', 'datechanged', 'datepublish', 'datedepublish', 'username', 'status', 'title', 'subtitle', 'ownerid', 'templatefields'] %}
 

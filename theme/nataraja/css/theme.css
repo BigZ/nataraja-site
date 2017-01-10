@@ -50,7 +50,7 @@ This is the file you need to edit to change the look of the theme.
 .section {
   position: relative;
   z-index: 999;
-  padding: 96px 0px;
+  padding: 0px 0px;
 }
 
 .section.section-header {
@@ -636,7 +636,7 @@ This is the file you need to edit to change the look of the theme.
   height: 40px;
   border-radius: 50%;
   display: inline-block;
-  margin: 24px 9px;
+  margin: 12px 9px;
 }
 
 .text-block a.social-icon i {
@@ -935,7 +935,7 @@ blockquote {
 /* Logo */
 .logo img {
   height: 40px;
-  margin: 30px 0px;
+  margin: 12px 0px;
   z-index: 99999;
   position: relative;
 }
@@ -1766,6 +1766,7 @@ ul.dropdown-menu li a:hover {
   z-index: 9999;
   text-align: left;
   overflow: auto;
+  height: 60px;
 }
 
 .navigation-menu ul {
