@@ -6,8 +6,8 @@
         <div class="col-md-4">
             {% if record.image!="" %}
                 <div class="large-4 imageholder">
-                    <a href="{{ image(value) }}">
-                        <img src="{{ thumbnail(value, 640, 480) }}">
+                    <a href="{{ image(record.image) }}">
+                        <img src="{{ thumbnail(record.image, 640, 480) }}">
                     </a>
                 </div>
             {% endif %}
