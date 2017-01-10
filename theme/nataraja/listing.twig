@@ -19,10 +19,9 @@
                     <div class="row releases-wrap">
                         {% for record in records %}
                             <div class="col-md-4 margin-top-big">
-                                <a href="{{ record.link }}">
-                                    {{ record.title }}
-                                    <img src="{{ thumbnail(record.image, 400, 260) }}">
-                                </a></div>
+                                <a href="{{ record.link }}" style="display: block; height: 40px">{{ record.title }}</a>
+                                <a href="{{ record.link }}"><img src="{{ thumbnail(record.image, 400, 260) }}"></a>
+                            </div>
                         {% endfor %}
                     </div>
                 </div>
