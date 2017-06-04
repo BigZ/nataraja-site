@@ -6,20 +6,13 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="row section-head">
-                        <div class="col-md-6 text-left">
-                            <h3>{{ contenttype }}</h3>
-                        </div>
-                        <div class="col-md-6 text-right">
-                            <p>Select one.</p>
-                        </div>
-                    </div>
+                    <h1 class="sectionTitle">{{ contenttype }}</h1>
                 </div>
-                <div class="col-md-12 margin-top-big">
+                <div class="col-md-12">
                     <div class="row releases-wrap">
                         {% for record in records %}
-                            <div class="col-md-4 margin-top-big">
-                                <a href="{{ record.link }}" style="display: block; height: 40px">{{ record.title }}</a>
+                            <div class="col-md-4 margin-top">
+                                <a href="{{ record.link }}" class="recordTitle">{{ record.title }}</a>
                                 <a href="{{ record.link }}"><img src="{{ thumbnail(record.image, 400, 260) }}"></a>
                             </div>
                         {% endfor %}

@@ -1,16 +1,16 @@
 @charset "UTF-8";
-/* 
-======================================================================== 
+/*
+========================================================================
 
 YUNG: theme.css
 Main Theme CSS file
 
-@Author: Andrew ch 
+@Author: Andrew ch
 @URL: http://andrewch.eu
- 
+
 This is the file you need to edit to change the look of the theme.
 
-======================================================================== 
+========================================================================
 
 - // TABLE OF CONTENTS // -
 
@@ -44,7 +44,7 @@ This is the file you need to edit to change the look of the theme.
 }
 
 #main-content {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 /* - General Section Classes - */
 .section {
@@ -3087,7 +3087,8 @@ footer hr {
 }
 
 footer a {
-  color: #fff;
+  c
+  olor: #fff;
 }*/
 
 /* - Newsletter Form - */
@@ -7904,7 +7905,7 @@ img.tp-slider-alternative-image {
 }
 
 /***********************************************
-    -  STANDARD NAVIGATION SETTINGS 
+    -  STANDARD NAVIGATION SETTINGS
 ***********************************************/
 .tp-thumbs.navbar,
 .tp-bullets.navbar,
@@ -18029,7 +18030,7 @@ ul.instagram_widget li img {
   margin-left: 5px;
 }
 
-/* 
+/*
  *  Core Owl Carousel CSS File
  *  v1.3.3
  */
@@ -18106,7 +18107,7 @@ ul.instagram_widget li img {
 }
 
 /*
-*   Owl Carousel Owl Demo Theme 
+*   Owl Carousel Owl Demo Theme
 *   v1.3.3
 */
 .owl-theme .owl-controls {
@@ -18189,8 +18190,8 @@ ul.instagram_widget li img {
   background: url(AjaxLoader.gif) no-repeat center center;
 }
 
-/* 
- *  Owl Carousel CSS3 Transitions 
+/*
+ *  Owl Carousel CSS3 Transitions
  *  v1.3.2
  */
 .owl-origin {

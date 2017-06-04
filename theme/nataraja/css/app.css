@@ -258,3 +258,60 @@ footer ul.dropdown {
     }
 }
 
+.homeTitle {
+    display: block;
+    text-align: center;
+    margin-top: 80px;
+    font-family: "Lato", sans-serif !important;
+}
+
+.sectionTitle {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: "Lato", sans-serif !important;
+}
+
+.beatport-logo {
+    display: inline-block;
+    margin: 7px auto;
+    float: left;
+    width: 40px;
+}
+
+.beatport-logo .logo-icon {
+    position: relative;
+    top: 4px;
+    height: 32px;
+    width: 32px;
+    margin-right: 5px;
+    display: inline-block;
+    fill: #94d500;
+}
+
+.bandcampLink, .beatportLink {
+    width: 40%;
+    float: left;
+    margin-left: 15px;
+    margin-right: 9px;
+}
+
+.recordTitle {
+    display: block;
+    height: 25px;
+    font-size: 15px;
+}
+
+@media screen and (min-width: 1150px) {
+    .beatport-logo .logo-type {
+        display: inline-block;
+        height: 25px;
+        width: 118px;
+        fill: #94d500;
+    }
+}
+
+svg {
+    pointer-events: none;
+}

@@ -100,6 +100,10 @@ events:
             type: datetime
             default: "2000-01-01"
             variant: inline
+        end_date:
+            type: datetime
+            default: "2000-01-01"
+            variant: inline
         link_facebook:
             type: text
         link_buy:
@@ -109,6 +113,7 @@ events:
 releases:
     name: Releases
     singular_name: Release
+    listing_template: releases.twig
     fields:
         name:
             type: text

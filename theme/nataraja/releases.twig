@@ -1,0 +1,37 @@
+{% include '_header.twig' %}
+
+    <!-- Main Blog Content -->
+<section class="section section-white">
+    <div class="container-fluid">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="sectionTitle">{{ contenttype }}</h1>
+                    <div style="text-align: center;">Our primary mission is to help fellow music fans to discover
+                        beautiful psychedelic music. From chilled beats to the fast pace of psychedelic trance, our aims is to
+                        provide qualitative and original pieces to the listerner, to provide him a pleasant and positive
+                        experience in the realms of imagination.
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row releases-wrap">
+                        {% for record in records %}
+                            <div class="col-md-4 margin-top">
+                                <a href="{{ record.link_bandcamp }}" class="recordTitle">{{ record.title }}</a>
+                                <a href="{{ record.link_bandcamp }}"><img src="{{ thumbnail(record.image, 400, 400) }}"></a>
+                                <a class="beatportLink" href="{{ record.link_beatport }}"><img src="/files/beatport.png"></a>
+                                <a class="bandcampLink" href="{{ record.link_bandcamp }}"><img src="/files/bandcamp.png"></a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {# If there are more records than will fit on one page, the pager is shown. #}
+                {{ pager() }}
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- End Main Content -->
+
+{% include '_footer.twig' %}
